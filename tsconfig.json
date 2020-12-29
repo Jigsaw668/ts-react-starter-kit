@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["es6", "scripthost", "dom", "es2015"],
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "esModuleInterop": false,
+    "strict": true,
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "server",
+    "src/app/atoms/spinner",
+  ]
+}

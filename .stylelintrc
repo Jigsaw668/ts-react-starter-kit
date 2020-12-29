@@ -1,0 +1,107 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-selector-bem-pattern",
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "ignoreFiles": ["**/*.(ts|tsx|js|jsx"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {"ignoreAtRules": ["mixin", "include"]}
+    ],
+    "selector-max-compound-selectors": 6,
+    "max-nesting-depth": 6,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    },
+    "no-empty-source": null,
+    "selector-class-pattern": null,
+    "order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::(before|after)"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^&_"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [
+      [
+        "content",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "flex-direction",
+        "justify-content",
+        "align-items",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "font",
+        "font-family",
+        "font-size",
+        "font-weight",
+        "line-height",
+        "text-decoration",
+        "text-transform",
+        "text-align",
+        "color",
+        "background-color",
+        "background-image",
+        "background-size",
+        "background-position",
+        "background-position-x",
+        "background-position-y",
+        "background-clip",
+        "background-repeat",
+        "border",
+        "border-radius",
+        "opacity",
+        "cursor",
+        "outline",
+        "transition"
+      ]
+    ],
+    "scss/selector-no-redundant-nesting-selector": true
+  }
+}

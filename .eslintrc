@@ -1,0 +1,68 @@
+{
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-comments",
+    "jest",
+    "promise"
+  ],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "required": {
+        "some": [ "nesting", "id" ]
+      }
+    }],
+    "eslint-comments/disable-enable-pair": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-trailing-spaces": [2, { "skipBlankLines": true }],
+    "eol-last": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-parens": ["error", "as-needed"],
+    "react/prop-types": "off",
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "@typescript-eslint/no-var-requires": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "max-len": ["error", { "code": 140 }],
+    "import/no-unresolved": 0,
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": [2, "single"],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".ts", ".tsx", ".js", ".jsx"]
+    }],
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 20, "consistent": true }],
+    "semi": "error",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
+  },
+  "ignorePatterns": ["/src/html/"]
+}

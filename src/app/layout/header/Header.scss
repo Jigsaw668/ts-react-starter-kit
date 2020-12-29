@@ -1,0 +1,19 @@
+@import 'src/settings/main';
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 16px;
+  background-color: $color--black;
+}
+
+.header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 16px;
+  background-color: $color--black;
+}

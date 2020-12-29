@@ -1,0 +1,12 @@
+@import 'src/settings/main';
+
+.layout {
+  flex: 1;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+}
