@@ -12,7 +12,7 @@
     "noEmit": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "esModuleInterop": false,
     "strict": true,
@@ -21,8 +21,6 @@
   },
   "exclude": [
     "node_modules",
-    "build",
-    "server",
-    "src/app/atoms/spinner",
+    "build"
   ]
 }

@@ -30,6 +30,8 @@
     }
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
+    "arrow-body-style": ["error", "as-needed"],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "jsx-a11y/label-has-for": "off",

@@ -186,7 +186,7 @@ module.exports = env => {
 
       new HtmlWebpackPlugin({
         inject: true,
-        template: path.resolve(__dirname, 'src/html/index.html'),
+        template: path.resolve(__dirname, './public/index.html'),
       }),
 
       new FontPreloadPlugin(),
@@ -218,14 +218,14 @@ module.exports = env => {
 
       new CopyPlugin({
         patterns: [
-          { from: path.resolve(__dirname, 'src/html/favicon.ico'), to: path.resolve(__dirname, 'build') },
-          { from: path.resolve(__dirname, 'src/html/manifest.json'), to: path.resolve(__dirname, 'build') },
+          { from: path.resolve(__dirname, './public/favicon.ico'), to: path.resolve(__dirname, 'build') },
+          { from: path.resolve(__dirname, './public/manifest.json'), to: path.resolve(__dirname, 'build') },
         ],
       }),
     ],
 
     devServer: mode === 'development' ? {
-      contentBase: path.join(__dirname, '/src/html'),
+      contentBase: path.join(__dirname, './public'),
       publicPath: '/',
       compress: true,
       port: 3000,

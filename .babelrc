@@ -2,7 +2,7 @@
   "presets": [
     "@babel/env",
     "@babel/typescript",
-    "@babel/react"
+    ["@babel/react", { "runtime": "automatic" }]
   ],
   "plugins": [
     "@loadable/babel-plugin",

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import useWindowWidthResize from '../../hooks/useWindowWidthResize';
 
 import './Header.scss';
